@@ -20,6 +20,8 @@ import {
   PlusCircle,
   Edit,
   Trash2,
+  ClipboardList,
+  UserCog,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -180,6 +182,8 @@ const MOCK_CRITERIA_UI = [
 export default function EmployeeCriteriaPage() {
   const employeeName = "Nguyễn Thị Thùy Dương";
   const employeeEmail = "duongnguyen.31231022904@st.ueh.edu.vn";
+  const avatarSrc = "/images/duongthuy.png";
+  const avatarFallback = "ND";
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -201,14 +205,17 @@ export default function EmployeeCriteriaPage() {
             <Link href="/employee/applications" className="text-sm font-medium">
               Hồ sơ ứng viên
             </Link>
-            <Link href="/employee/criteria" className="text-sm font-medium text-primary">
-              Tiêu chí
-            </Link>
             <Link href="/employee/interviews" className="text-sm font-medium">
               Lịch phỏng vấn
             </Link>
             <Link href="/employee/job-descriptions" className="text-sm font-medium">
               Vị trí tuyển dụng
+            </Link>
+            <Link href="/employee/criteria" className="text-sm font-medium text-primary">
+              Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -221,8 +228,8 @@ export default function EmployeeCriteriaPage() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Avatar className="cursor-pointer">
-                  <AvatarImage src="/placeholder.svg" alt={employeeName} />
-                  <AvatarFallback>ND</AvatarFallback>
+                  <AvatarImage src={avatarSrc} alt={employeeName} />
+                  <AvatarFallback>{avatarFallback}</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
@@ -256,8 +263,8 @@ export default function EmployeeCriteriaPage() {
             <div className="space-y-4">
               <div className="flex flex-col items-center p-6 bg-card rounded-lg border shadow-sm">
                 <Avatar className="h-24 w-24 mb-4">
-                  <AvatarImage src="public/images/duongthuy.png" alt={employeeName} />
-                  <AvatarFallback>ND</AvatarFallback>
+                  <AvatarImage src={avatarSrc} alt={employeeName} />
+                  <AvatarFallback>{avatarFallback}</AvatarFallback>
                 </Avatar>
                 <h2 className="text-xl font-bold">{employeeName}</h2>
                 <p className="text-sm text-muted-foreground">Nhân viên tuyển dụng</p>
@@ -288,13 +295,6 @@ export default function EmployeeCriteriaPage() {
                       <span>Hồ sơ ứng viên</span>
                     </Link>
                     <Link
-                      href="/employee/criteria"
-                      className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary"
-                    >
-                      <Users className="h-4 w-4" />
-                      <span>Tiêu chí</span>
-                    </Link>
-                    <Link
                       href="/employee/interviews"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
@@ -307,6 +307,20 @@ export default function EmployeeCriteriaPage() {
                     >
                       <Briefcase className="h-4 w-4" />
                       <span>Vị trí tuyển dụng</span>
+                    </Link>
+                    <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
                     </Link>
                     <Link
                       href="/employee/email-templates"
@@ -351,53 +365,110 @@ export default function EmployeeCriteriaPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                {MOCK_CRITERIA_UI.length === 0 ? (
-                  <div className="py-8 text-center text-muted-foreground">
-                    <Users className="mx-auto h-12 w-12 mb-4" />
-                    <h3 className="text-lg font-semibold mb-2">Chưa có tiêu chí nào</h3>
-                    <p>Nhấn "Thêm tiêu chí" để bắt đầu.</p>
+                <div className="space-y-4">
+                  {/* Search and Filter Section */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex-1">
+                      <div className="relative">
+                        <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                        <Input
+                          type="search"
+                          placeholder="Tìm kiếm tiêu chí..."
+                          className="w-full pl-8"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex gap-4">
+                      <Select>
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Danh mục" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">Tất cả danh mục</SelectItem>
+                          {CATEGORIES.map((category) => (
+                            <SelectItem key={category} value={category}>
+                              {category}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <Select>
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Vị trí" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">Tất cả vị trí</SelectItem>
+                          <SelectItem value="active">Phòng Công nghệ</SelectItem>
+                          <SelectItem value="inactive">Phòng Marketing</SelectItem>
+                          <SelectItem value="inactive">Phòng Kinh doanh</SelectItem>
+                          <SelectItem value="inactive">Phòng Nhân sự</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <Select>
+                        <SelectTrigger className="w-[180px]">
+                          <SelectValue placeholder="Sắp xếp theo" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="name-asc">Tên (A-Z)</SelectItem>
+                          <SelectItem value="name-desc">Tên (Z-A)</SelectItem>
+                          <SelectItem value="weight-asc">Trọng số (tăng dần)</SelectItem>
+                          <SelectItem value="weight-desc">Trọng số (giảm dần)</SelectItem>
+                          <SelectItem value="date-asc">Ngày tạo (mới nhất)</SelectItem>
+                          <SelectItem value="date-desc">Ngày tạo (cũ nhất)</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
-                ) : (
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Tên tiêu chí</TableHead>
-                        <TableHead>Danh mục</TableHead>
-                        <TableHead className="text-center">Trọng số (%)</TableHead>
-                        <TableHead className="text-center">Trạng thái</TableHead>
-                        <TableHead className="text-right">Thao tác</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {MOCK_CRITERIA_UI.map((criterion) => (
-                        <TableRow key={criterion.id}>
-                          <TableCell className="font-medium">{criterion.name}</TableCell>
-                          <TableCell>{criterion.category}</TableCell>
-                          <TableCell className="text-center">{criterion.weight}%</TableCell>
-                          <TableCell className="text-center">
-                            {criterion.isActive ? (
-                              <Badge variant="outline" className="text-green-700 border-green-200 bg-green-50">
-                                Đang hoạt động
-                              </Badge>
-                            ) : (
-                              <Badge variant="outline" className="text-gray-700 border-gray-200 bg-gray-50">
-                                Đã vô hiệu
-                              </Badge>
-                            )}
-                          </TableCell>
-                          <TableCell className="text-right">
-                            <Button variant="ghost" size="icon" className="hover:text-blue-500">
-                              <Edit className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="icon" className="hover:text-red-500">
-                              <Trash2 className="h-4 w-4" />
-                            </Button>
-                          </TableCell>
+
+                  {/* Table Section */}
+                  {MOCK_CRITERIA_UI.length === 0 ? (
+                    <div className="py-8 text-center text-muted-foreground">
+                      <Users className="mx-auto h-12 w-12 mb-4" />
+                      <h3 className="text-lg font-semibold mb-2">Chưa có tiêu chí nào</h3>
+                      <p>Nhấn "Thêm tiêu chí" để bắt đầu.</p>
+                    </div>
+                  ) : (
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Tên tiêu chí</TableHead>
+                          <TableHead>Danh mục</TableHead>
+                          <TableHead className="text-center">Trọng số (%)</TableHead>
+                          <TableHead className="text-center">Vị trí</TableHead>
+                          <TableHead className="text-right">Thao tác</TableHead>
                         </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                )}
+                      </TableHeader>
+                      <TableBody>
+                        {MOCK_CRITERIA_UI.map((criterion) => (
+                          <TableRow key={criterion.id}>
+                            <TableCell className="font-medium">{criterion.name}</TableCell>
+                            <TableCell>{criterion.category}</TableCell>
+                            <TableCell className="text-center">{criterion.weight}%</TableCell>
+                            <TableCell className="text-center">
+                              {criterion.isActive ? (
+                                <Badge variant="outline" className="text-gray-700 border-gray-200 bg-gray-50">
+                                  Phòng Công nghệ
+                                </Badge>
+                              ) : (
+                                <Badge variant="outline" className="text-green-700 border-green-200 bg-green-50">
+                                  Tất cả vị trí
+                                </Badge>
+                              )}
+                            </TableCell>
+                            <TableCell className="text-right">
+                              <Button variant="ghost" size="icon" className="hover:text-blue-500">
+                                <Edit className="h-4 w-4" />
+                              </Button>
+                              <Button variant="ghost" size="icon" className="hover:text-red-500">
+                                <Trash2 className="h-4 w-4" />
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  )}
+                </div>
               </CardContent>
             </Card>
           </div>

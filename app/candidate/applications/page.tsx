@@ -155,7 +155,7 @@ export default function CandidateApplicationsPage() {
                 <Button asChild>
                   <Link href="/careers">
                     <Briefcase className="mr-2 h-4 w-4" />
-                    Tìm việc mới
+                    Nộp hồ sơ mới
                   </Link>
                 </Button>
               </div>
@@ -192,7 +192,7 @@ export default function CandidateApplicationsPage() {
                           Đang xử lý
                         </div>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/1">Chi tiết</Link>
+                          <div>Chi tiết</div>
                         </Button>
                       </div>
                     </div>
@@ -221,7 +221,7 @@ export default function CandidateApplicationsPage() {
                           Mời phỏng vấn
                         </div>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/2">Chi tiết</Link>
+                          <div>Chi tiết</div>
                         </Button>
                       </div>
                     </div>
@@ -250,7 +250,7 @@ export default function CandidateApplicationsPage() {
                           Đã từ chối
                         </div>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/3">Chi tiết</Link>
+                          <div>Chi tiết</div>
                         </Button>
                       </div>
                     </div>
@@ -292,8 +292,8 @@ export default function CandidateApplicationsPage() {
                         </p>
                       </CardContent>
                       <CardFooter className="border-t pt-4">
-                        <Button className="w-full" asChild>
-                          <Link href="/careers/dk-sse-001">Xem chi tiết & Ứng tuyển</Link>
+                        <Button className="w-full" asChild disabled>
+                          <div>Xem chi tiết & Ứng tuyển</div>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -325,7 +325,7 @@ export default function CandidateApplicationsPage() {
                       </CardContent>
                       <CardFooter className="border-t pt-4">
                         <Button className="w-full" asChild>
-                          <Link href="/careers/dk-ba-002">Xem chi tiết & Ứng tuyển</Link>
+                          <div>Xem chi tiết & Ứng tuyển</div>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -357,7 +357,7 @@ export default function CandidateApplicationsPage() {
                       </CardContent>
                       <CardFooter className="border-t pt-4">
                         <Button className="w-full" asChild>
-                          <Link href="/careers/dk-mkt-003">Xem chi tiết & Ứng tuyển</Link>
+                          <div>Xem chi tiết & Ứng tuyển</div>
                         </Button>
                       </CardFooter>
                     </Card>

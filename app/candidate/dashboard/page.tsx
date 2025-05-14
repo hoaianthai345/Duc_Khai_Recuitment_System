@@ -155,7 +155,7 @@ export default function CandidateDashboard() {
                 <Button asChild>
                   <Link href="/careers">
                     <Briefcase className="mr-2 h-4 w-4" />
-                    Tìm việc mới
+                    Nộp hồ sơ mới
                   </Link>
                 </Button>
               </div>
@@ -213,7 +213,7 @@ export default function CandidateDashboard() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge className="bg-yellow-500">Đang xử lý</Badge>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/1">Chi tiết</Link>
+                          <Link href="/candidate/applications">Chi tiết</Link>
                         </Button>
                       </div>
                     </div>
@@ -234,7 +234,7 @@ export default function CandidateDashboard() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge className="bg-blue-500">Mời phỏng vấn</Badge>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/2">Chi tiết</Link>
+                          <Link href="/candidate/applications">Chi tiết</Link>
                         </Button>
                       </div>
                     </div>
@@ -255,7 +255,7 @@ export default function CandidateDashboard() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge className="bg-yellow-500">Đang xử lý</Badge>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/applications/3">Chi tiết</Link>
+                          <Link href="/candidate/applications">Chi tiết</Link>
                         </Button>
                       </div>
                     </div>
@@ -292,7 +292,7 @@ export default function CandidateDashboard() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge>Sắp tới</Badge>
                         <Button variant="ghost" size="sm" asChild>
-                          <Link href="/candidate/interviews/1">Chi tiết</Link>
+                          <Link href="/candidate/interviews">Chi tiết</Link>
                         </Button>
                       </div>
                     </div>

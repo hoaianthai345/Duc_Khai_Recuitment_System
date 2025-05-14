@@ -22,7 +22,9 @@ import {
   Download, // For export button
   FileSpreadsheet, // For Excel
   FileJson, // For CSV (though FileText is also an option)
-  Printer // For PDF
+  Printer, // For PDF
+  ClipboardList, // Added for Criteria icon
+  UserCog, // Added for accounts icon
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -75,14 +77,20 @@ export default function EmployeeReportsPage() {
             <Link href="/employee/applications" className="text-sm font-medium">
               Hồ sơ ứng viên
             </Link>
-            <Link href="/employee/criteria" className="text-sm font-medium">
-              Tiêu chí
-            </Link>
             <Link href="/employee/interviews" className="text-sm font-medium">
               Lịch phỏng vấn
             </Link>
             <Link href="/employee/job-descriptions" className="text-sm font-medium">
               Vị trí tuyển dụng
+            </Link>
+            <Link href="/employee/criteria" className="text-sm font-medium">
+              Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
+            </Link>
+            <Link href="/employee/email-templates" className="text-sm font-medium">
+              Email mẫu
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium text-primary"> {/* Active Link */}
               Báo cáo
@@ -158,10 +166,6 @@ export default function EmployeeReportsPage() {
                       <FileText className="h-4 w-4" />
                       <span>Hồ sơ ứng viên</span>
                     </Link>
-                    <Link href="/employee/criteria" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
-                      <Users className="h-4 w-4" />
-                      <span>Tiêu chí</span>
-                    </Link>
                     <Link href="/employee/interviews" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <Calendar className="h-4 w-4" />
                       <span>Lịch phỏng vấn</span>
@@ -169,6 +173,14 @@ export default function EmployeeReportsPage() {
                     <Link href="/employee/job-descriptions" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <Briefcase className="h-4 w-4" />
                       <span>Vị trí tuyển dụng</span>
+                    </Link>
+                    <Link href="/employee/criteria" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link href="/employee/accounts" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
                     </Link>
                     <Link href="/employee/email-templates" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <Mail className="h-4 w-4" />

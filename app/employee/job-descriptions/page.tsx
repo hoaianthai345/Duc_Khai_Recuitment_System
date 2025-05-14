@@ -24,6 +24,8 @@ import {
   Edit,
   ExternalLink,
   Trash2,
+  ClipboardList,
+  UserCog,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -153,6 +155,20 @@ export default function JobDescriptionsPage() {
                       <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
+                    </Link>
+                    <Link
                       href="/employee/email-templates"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
@@ -185,7 +201,7 @@ export default function JobDescriptionsPage() {
                 <Button asChild>
                   <Link href="/employee/job-descriptions/create">
                     <Plus className="mr-2 h-4 w-4" />
-                    Tạo vị trí tuyển dụng
+                    Thêm vị trí tuyển dụng
                   </Link>
                 </Button>
               </div>

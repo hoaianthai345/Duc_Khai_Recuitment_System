@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Building2, Bell, User, Briefcase, FileText, Calendar, LogOut, BarChart, Mail, Edit } from "lucide-react"
+import { Building2, Bell, User, Briefcase, FileText, Calendar, LogOut, BarChart, Mail, Edit, KeyRound, ClipboardList } from "lucide-react"
 
 export default function EmployeeProfilePage() {
   // Hardcoded data for prototype
@@ -22,7 +22,8 @@ export default function EmployeeProfilePage() {
     email: "duongnguyen.31231022904@st.ueh.edu.vn",
     position: "Nhân viên tuyển dụng",
     department: "Phòng Nhân sự", // Added field
-    phone: "0987 654 321", // Added field
+    phone: "0987 654 321",
+    birthday: "01/01/2005" // Added field
   }
 
   return (
@@ -131,14 +132,27 @@ export default function EmployeeProfilePage() {
                       <Calendar className="h-4 w-4" />
                       <span>Lịch phỏng vấn</span>
                     </Link>
-                    <Link href="/employee/job-descriptions" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
+                    <Link
+                      href="/employee/job-descriptions"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
                       <Briefcase className="h-4 w-4" />
                       <span>Vị trí tuyển dụng</span>
                     </Link>
-                     <Link href="/employee/email-templates" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
-                       <Mail className="h-4 w-4" />
-                       <span>Email mẫu</span>
-                     </Link>
+                    <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/email-templates"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <Mail className="h-4 w-4" />
+                      <span>Email mẫu</span>
+                    </Link>
                     <Link href="/employee/reports" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <BarChart className="h-4 w-4" />
                       <span>Báo cáo</span>
@@ -179,7 +193,7 @@ export default function EmployeeProfilePage() {
                     <Input id="email" type="email" value={employeeData.email} readOnly />
                   </div>
                   <div className="space-y-1">
-                    <Label htmlFor="position">Chức vụ</Label>
+                    <Label htmlFor="position">Vai trò</Label>
                     <Input id="position" value={employeeData.position} readOnly />
                   </div>
                    <div className="space-y-1">
@@ -189,6 +203,10 @@ export default function EmployeeProfilePage() {
                    <div className="space-y-1">
                     <Label htmlFor="phone">Số điện thoại</Label>
                     <Input id="phone" type="tel" value={employeeData.phone} readOnly />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="birthday">Ngày sinh</Label>
+                    <Input id="birthday" value={employeeData.birthday} readOnly />
                   </div>
                 </div>
                  {/* Add more sections as needed, e.g., Change Password */}

@@ -63,7 +63,7 @@ export default function ApplicationDetail() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Avatar className="cursor-pointer">
-                  <AvatarImage src="/placeholder.svg" alt="@user" />
+                  <AvatarImage src="/images/duongthuy.png" alt="@user" />
                   <AvatarFallback>NV</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
@@ -72,8 +72,8 @@ export default function ApplicationDetail() {
                 <DropdownMenuSeparator />
                 <div className="px-2 py-1.5 text-sm">
                   {/* TODO: Fetch actual employee name and email */}
-                  <p className="font-medium">Trần Thị B</p>
-                  <p className="text-xs text-muted-foreground">tranthib@example.com</p>
+                  <p className="font-medium">Nguyễn Thị Thùy Dương</p>
+                  <p className="text-xs text-muted-foreground">duongnguyen.31231023384@st.ueh.edu.vn</p>
                 </div>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
@@ -125,11 +125,11 @@ export default function ApplicationDetail() {
                 <div className="space-y-2 pt-4">
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">tannguyen@example.com</span>
+                    <span className="text-sm">tannguyen.31231023384@st.ueh.edu.vn</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">0912 345 678</span>
+                    <span className="text-sm">0123 456 789</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -212,15 +212,15 @@ export default function ApplicationDetail() {
                         </div>
                         <div>
                           <h3 className="text-sm font-medium mb-1">Ngày sinh</h3>
-                          <p>15/08/2005</p>
+                          <p>15/04/2005</p>
                         </div>
                         <div>
                           <h3 className="text-sm font-medium mb-1">Email</h3>
-                          <p>tannguyen@example.com</p>
+                          <p>tannguyen.31231023384@st.ueh.edu.vn</p>
                         </div>
                         <div>
                           <h3 className="text-sm font-medium mb-1">Số điện thoại</h3>
-                          <p>0912 345 678</p>
+                          <p>0123 456 789</p>
                         </div>
                         <div>
                           <h3 className="text-sm font-medium mb-1">Địa chỉ</h3>

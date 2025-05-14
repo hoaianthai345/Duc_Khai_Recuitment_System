@@ -17,6 +17,8 @@ import {
   Users,
   BarChart,
   Mail,
+  ClipboardList,
+  UserCog,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -53,6 +55,12 @@ export default function EmployeeDashboard() {
             </Link>
             <Link href="/employee/job-descriptions" className="text-sm font-medium">
               Vị trí tuyển dụng
+            </Link>
+            <Link href="/employee/criteria" className="text-sm font-medium">
+              Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -146,6 +154,20 @@ export default function EmployeeDashboard() {
                       <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
+                    </Link>
+                    <Link
                       href="/employee/email-templates"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
@@ -226,12 +248,12 @@ export default function EmployeeDashboard() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
-                          <AvatarFallback>NVA</AvatarFallback>
+                          <AvatarImage src="/images/candidate-avatar.png" alt="Nguyễn Duy Tân" />
+                          <AvatarFallback>NDT</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Nguyễn Văn A</h3>
-                          <p className="text-sm text-muted-foreground">Kỹ sư phần mềm</p>
+                          <h3 className="font-medium">Nguyễn Duy Tân</h3>
+                          <p className="text-sm text-muted-foreground">tannguyen.31231023384@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 10/05/2024</span>
@@ -239,7 +261,7 @@ export default function EmployeeDashboard() {
                         </div>
                       </div>
                       <div className="flex flex-col items-end gap-2">
-                        <Badge className="bg-yellow-500">Chưa xử lý</Badge>
+                        <Badge className="bg-yellow-500">Chờ xử lý</Badge>
                         <Button variant="ghost" size="sm" asChild>
                           <Link href="/employee/applications/1">Xem hồ sơ</Link>
                         </Button>
@@ -248,12 +270,12 @@ export default function EmployeeDashboard() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
-                          <AvatarFallback>LTH</AvatarFallback>
+                          <AvatarImage src="/images/avatars/02.png" alt="Thái Hoài An" />
+                          <AvatarFallback>THA</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Lê Thị H</h3>
-                          <p className="text-sm text-muted-foreground">Chuyên viên Marketing</p>
+                          <h3 className="font-medium">Thái Hoài An</h3>
+                          <p className="text-sm text-muted-foreground">anthai.31231025020@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 09/05/2024</span>
@@ -270,12 +292,12 @@ export default function EmployeeDashboard() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
-                          <AvatarFallback>TVC</AvatarFallback>
+                          <AvatarImage src="/images/avatars/03.png" alt="Hà Quang Đại" />
+                          <AvatarFallback>HQD</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Trần Văn C</h3>
-                          <p className="text-sm text-muted-foreground">Nhân viên kinh doanh</p>
+                          <h3 className="font-medium">Hà Quang Đại</h3>
+                          <p className="text-sm text-muted-foreground">daiha.3123102?@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 08/05/2024</span>
@@ -311,8 +333,8 @@ export default function EmployeeDashboard() {
                           <Calendar className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-medium">Phỏng vấn: Lê Thị H - Chuyên viên Marketing</h3>
-                          <p className="text-sm text-muted-foreground">Phòng họp A - Tầng 3</p>
+                          <h3 className="font-medium">Phỏng vấn: Thái Hoài An - Chuyên viên Marketing</h3>
+                          <p className="text-sm text-muted-foreground">Ứng tuyển vị trí: Chuyên viên Marketing</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">15/05/2024 - 10:00 AM</span>
@@ -332,8 +354,8 @@ export default function EmployeeDashboard() {
                           <Calendar className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-medium">Phỏng vấn: Phạm Văn D - Kỹ sư phần mềm</h3>
-                          <p className="text-sm text-muted-foreground">Phòng họp B - Tầng 3</p>
+                          <h3 className="font-medium">Phỏng vấn: Lê Vy - Kỹ sư phần mềm</h3>
+                          <p className="text-sm text-muted-foreground">Ứng tuyển vị trí: Kỹ sư phần mềm</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">16/05/2024 - 14:00 PM</span>

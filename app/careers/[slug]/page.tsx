@@ -58,7 +58,7 @@ export default function JobDetailPage({ params }: { params: { slug: string } }) 
     ],
     hiringProcess: [
       "Sàng lọc hồ sơ",
-      "Phỏng vấn sơ bộ qua điện thoại",
+      "Phỏng vấn sơ bộ",
       "Bài kiểm tra kỹ thuật",
       "Phỏng vấn chuyên môn",
       "Phỏng vấn với quản lý",

@@ -26,28 +26,24 @@ export function Header() {
 
   const navItems: NavItem[] = [
     {
-      title: "Trang chủ",
+      title: "Giới thiệu đồ án",
       href: "/",
       isActive: pathname === "/",
     },
     {
-      title: "Về chúng tôi",
+      title: "Công ty Đức Khải",
       href: "/about",
       isActive: pathname === "/about",
-      children: [
-        { title: "Giới thiệu", href: "/about" },
-        { title: "Lịch sử phát triển", href: "/about/history" },
-        { title: "Đội ngũ lãnh đạo", href: "/about/leadership" },
-      ],
     },
     {
-      title: "Cơ hội nghề nghiệp",
+      title: "Vị trí tuyển dụng",
       href: "/careers",
-      isActive: pathname === "/careers" || pathname.startsWith("/careers/"),
-      children: [
-        { title: "Vị trí tuyển dụng", href: "/careers" },
-        { title: "Quy trình tuyển dụng", href: "/careers/process" }
-      ],
+      isActive: pathname === "/careers",
+    },
+    {
+      title: "Quy trình tuyển dụng",
+      href: "/careers/process",
+      isActive: pathname === "/careers/process",
     },
     {
       title: "Liên hệ",

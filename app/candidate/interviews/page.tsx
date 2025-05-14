@@ -244,7 +244,7 @@ export default function CandidateInterviewsPage() {
                                 <div className="flex flex-col items-end gap-2">
                                      <Button variant="ghost" size="sm" asChild>
                                         {/* Link to a potential detail page, or disable if no action */}
-                                        <Link href={`/candidate/interviews/${interview.id}`}>Chi tiết</Link>
+                                        <div>Chi tiết</div>
                                      </Button>
                                      {interview.status === 'Sắp tới' && interview.type === 'Trực tuyến' && (
                                         <Button size="sm">

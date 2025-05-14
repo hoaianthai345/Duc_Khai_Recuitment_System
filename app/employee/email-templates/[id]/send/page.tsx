@@ -47,34 +47,34 @@ Công ty Cổ phần Đức Khải
     {
       id: "1",
       name: "Nguyễn Duy Tân",
-      email: "tannguyen@example.com",
-      position: "Kỹ sư phần mềm",
-      status: "pending",
+      email: "nguyenduytan@example.com",
+      jobTitle: "Kỹ sư phần mềm",
+      status: "Đã nộp",
       avatar: "/images/candidate-avatar.png",
     },
     {
       id: "2",
-      name: "Lê Thị H",
-      email: "lethih@example.com",
-      position: "Chuyên viên Marketing",
-      status: "interview",
-      avatar: "/placeholder.svg",
+      name: "Thái Hoài An",
+      email: "thaihoaian@example.com",
+      jobTitle: "Chuyên viên Marketing",
+      status: "Phỏng vấn vòng 1",
+      avatar: "/images/avatars/02.png",
     },
     {
       id: "3",
-      name: "Trần Văn C",
-      email: "tranvanc@example.com",
-      position: "Nhân viên kinh doanh",
-      status: "rejected",
-      avatar: "/placeholder.svg",
+      name: "Hà Quang Đại",
+      email: "haquangdai@example.com",
+      jobTitle: "Nhân viên kinh doanh",
+      status: "Phỏng vấn vòng 2",
+      avatar: "/images/avatars/03.png",
     },
     {
       id: "4",
-      name: "Phạm Văn D",
-      email: "phamvand@example.com",
-      position: "Kỹ sư phần mềm",
-      status: "interview",
-      avatar: "/placeholder.svg",
+      name: "Lê Vy",
+      email: "levy@example.com",
+      jobTitle: "Kỹ sư phần mềm",
+      status: "Đề nghị nhận việc",
+      avatar: "/images/avatars/04.png",
     },
     {
       id: "5",
@@ -118,7 +118,7 @@ Công ty Cổ phần Đức Khải
     // Replace placeholders with candidate data
     const preview = emailContent
       .replace(/{{candidate_name}}/g, candidate.name)
-      .replace(/{{job_title}}/g, candidate.position)
+      .replace(/{{job_title}}/g, candidate.jobTitle || "[Vị trí tuyển dụng]")
       .replace(/{{sender_name}}/g, "Trần Thị B")
       .replace(/{{interview_date}}/g, "15/05/2024")
       .replace(/{{interview_time}}/g, "10:00")
@@ -246,21 +246,26 @@ Công ty Cổ phần Đức Khải
                                     </div>
                                   </div>
                                 </TableCell>
-                                <TableCell>{candidate.position}</TableCell>
+                                <TableCell>{candidate.jobTitle}</TableCell>
                                 <TableCell>
-                                  {candidate.status === "pending" && (
+                                  {candidate.status === "Đã nộp" && (
                                     <Badge variant="outline" className="bg-yellow-50 text-yellow-700">
-                                      Chưa xử lý
+                                      Đã nộp
                                     </Badge>
                                   )}
-                                  {candidate.status === "interview" && (
+                                  {candidate.status === "Phỏng vấn vòng 1" && (
                                     <Badge variant="outline" className="bg-blue-50 text-blue-700">
-                                      Phỏng vấn
+                                      Phỏng vấn vòng 1
                                     </Badge>
                                   )}
-                                  {candidate.status === "rejected" && (
-                                    <Badge variant="outline" className="bg-red-50 text-red-700">
-                                      Từ chối
+                                  {candidate.status === "Phỏng vấn vòng 2" && (
+                                    <Badge variant="outline" className="bg-blue-50 text-blue-700">
+                                      Phỏng vấn vòng 2
+                                    </Badge>
+                                  )}
+                                  {candidate.status === "Đề nghị nhận việc" && (
+                                    <Badge variant="outline" className="bg-green-50 text-green-700">
+                                      Đề nghị nhận việc
                                     </Badge>
                                   )}
                                 </TableCell>

@@ -38,7 +38,7 @@ Công ty Cổ phần Đức Khải
 
   const previewEmail = () => {
     // Replace placeholders with sample data
-    const candidate_name = "Nguyễn Văn A"
+    const candidate_name = "Nguyễn Duy Tân"
     const job_title = "Kỹ sư phần mềm"
     const sender_name = "Trần Thị B"
     const interview_date = "15/05/2024"

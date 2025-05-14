@@ -394,9 +394,10 @@ export default function CandidateProfilePage() {
                       <Button variant="outline">Đổi mật khẩu</Button>
                        <div className="flex items-center justify-between pt-4 border-t">
                          <div>
-                           <p className="text-sm font-medium">Xóa tài khoản</p>
+                           <p className="text-sm font-medium">Xóa tài khoản/hồ sơ ứng tuyển</p>
                            <p className="text-xs text-muted-foreground">Hành động này không thể hoàn tác.</p>
                          </div>
+                         <Button variant="outline">Xóa hồ sơ ứng tuyển</Button>
                          <Button variant="destructive">Xóa tài khoản</Button>
                        </div>
                   </CardContent>

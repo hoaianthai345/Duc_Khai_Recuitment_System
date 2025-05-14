@@ -21,6 +21,9 @@ import {
   Mail,
   MapPin,
   Video,
+  ClipboardList,
+  UserCog,
+  Edit,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -57,6 +60,12 @@ export default function EmployeeInterviews() {
             </Link>
             <Link href="/employee/job-descriptions" className="text-sm font-medium">
               Vị trí tuyển dụng
+            </Link>
+            <Link href="/employee/criteria" className="text-sm font-medium">
+              Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -150,6 +159,20 @@ export default function EmployeeInterviews() {
                       <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
+                    </Link>
+                    <Link
                       href="/employee/email-templates"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
@@ -180,9 +203,9 @@ export default function EmployeeInterviews() {
               <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold">Quản lý lịch phỏng vấn</h1>
                 <Button asChild>
-                  <Link href="/employee/interviews/create">
+                  <Link href="/employee/interviews/">
                     <Calendar className="mr-2 h-4 w-4" />
-                    Tạo lịch phỏng vấn
+                    Thêm lịch phỏng vấn
                   </Link>
                 </Button>
               </div>
@@ -230,7 +253,7 @@ export default function EmployeeInterviews() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <h3 className="font-medium">Phỏng vấn: Lê Thị H - Chuyên viên Marketing</h3>
+                            <h3 className="font-medium">Phỏng vấn: Thái Hoài An - Chuyên viên Marketing</h3>
                             <Badge>Vòng 1</Badge>
                           </div>
                           <div className="flex items-center gap-4 mt-1">
@@ -245,8 +268,8 @@ export default function EmployeeInterviews() {
                           </div>
                           <div className="flex items-center gap-2 mt-2">
                             <Avatar className="h-6 w-6">
-                              <AvatarImage src="/placeholder.svg" alt="@interviewer" />
-                              <AvatarFallback>NV</AvatarFallback>
+                              <AvatarImage src="/images/avatars/02.png" alt="Thái Hoài An" />
+                              <AvatarFallback>THA</AvatarFallback>
                             </Avatar>
                             <span className="text-xs">Người phỏng vấn: Nguyễn Văn X, Trần Văn Y</span>
                           </div>
@@ -277,7 +300,7 @@ export default function EmployeeInterviews() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <h3 className="font-medium">Phỏng vấn: Phạm Văn D - Kỹ sư phần mềm</h3>
+                            <h3 className="font-medium">Phỏng vấn: Lê Vy - Kỹ sư phần mềm</h3>
                             <Badge>Vòng 2</Badge>
                           </div>
                           <div className="flex items-center gap-4 mt-1">
@@ -292,8 +315,8 @@ export default function EmployeeInterviews() {
                           </div>
                           <div className="flex items-center gap-2 mt-2">
                             <Avatar className="h-6 w-6">
-                              <AvatarImage src="/placeholder.svg" alt="@interviewer" />
-                              <AvatarFallback>NV</AvatarFallback>
+                              <AvatarImage src="/images/avatars/04.png" alt="Lê Vy" />
+                              <AvatarFallback>LV</AvatarFallback>
                             </Avatar>
                             <span className="text-xs">Người phỏng vấn: Lê Văn Z, Nguyễn Thị W</span>
                           </div>
@@ -324,7 +347,7 @@ export default function EmployeeInterviews() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <h3 className="font-medium">Phỏng vấn: Nguyễn Thị M - Kế toán viên</h3>
+                            <h3 className="font-medium">Phỏng vấn: Hà Quang Đại - Nhân viên kinh doanh</h3>
                             <Badge>Vòng 1</Badge>
                           </div>
                           <div className="flex items-center gap-4 mt-1">
@@ -339,8 +362,8 @@ export default function EmployeeInterviews() {
                           </div>
                           <div className="flex items-center gap-2 mt-2">
                             <Avatar className="h-6 w-6">
-                              <AvatarImage src="/placeholder.svg" alt="@interviewer" />
-                              <AvatarFallback>NV</AvatarFallback>
+                              <AvatarImage src="/images/avatars/03.png" alt="Hà Quang Đại" />
+                              <AvatarFallback>HQD</AvatarFallback>
                             </Avatar>
                             <span className="text-xs">Người phỏng vấn: Trần Thị B, Phạm Văn C</span>
                           </div>

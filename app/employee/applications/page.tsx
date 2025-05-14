@@ -20,6 +20,8 @@ import {
   BarChart,
   Mail,
   Users,
+  ClipboardList,
+  UserCog,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -56,6 +58,12 @@ export default function EmployeeApplications() {
             </Link>
             <Link href="/employee/job-descriptions" className="text-sm font-medium">
               Vị trí tuyển dụng
+            </Link>
+            <Link href="/employee/criteria" className="text-sm font-medium">
+              Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -149,6 +157,20 @@ export default function EmployeeApplications() {
                       <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link
+                      href="/employee/criteria"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <ClipboardList className="h-4 w-4" />
+                      <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
+                    </Link>
+                    <Link
                       href="/employee/email-templates"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
@@ -222,12 +244,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Nguyễn Văn A</h3>
-                          <p className="text-sm text-muted-foreground">Kỹ sư phần mềm</p>
+                          <h3 className="font-medium">Nguyễn Duy Tân</h3>
+                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 10/05/2024</span>
@@ -244,12 +266,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/02.png" alt="Avatar" />
                           <AvatarFallback>LTH</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Lê Thị H</h3>
-                          <p className="text-sm text-muted-foreground">Chuyên viên Marketing</p>
+                          <h3 className="font-medium">Thái Hoài An</h3>
+                          <p className="text-sm text-muted-foreground">lethih@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 09/05/2024</span>
@@ -266,12 +288,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/03.png" alt="Avatar" />
                           <AvatarFallback>TVC</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Trần Văn C</h3>
-                          <p className="text-sm text-muted-foreground">Nhân viên kinh doanh</p>
+                          <h3 className="font-medium">Hà Quang Đại</h3>
+                          <p className="text-sm text-muted-foreground">tranvanc@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 08/05/2024</span>
@@ -288,12 +310,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/04.png" alt="Avatar" />
                           <AvatarFallback>PVD</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Phạm Văn D</h3>
-                          <p className="text-sm text-muted-foreground">Kỹ sư phần mềm</p>
+                          <h3 className="font-medium">Lê Vy</h3>
+                          <p className="text-sm text-muted-foreground">phamvand@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 07/05/2024</span>
@@ -310,12 +332,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
-                          <AvatarFallback>NTM</AvatarFallback>
+                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Nguyễn Thị M</h3>
-                          <p className="text-sm text-muted-foreground">Kế toán viên</p>
+                          <h3 className="font-medium">Nguyễn Duy Tân</h3>
+                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 06/05/2024</span>
@@ -359,12 +381,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Nguyễn Văn A</h3>
-                          <p className="text-sm text-muted-foreground">Kỹ sư phần mềm</p>
+                          <h3 className="font-medium">Nguyễn Duy Tân</h3>
+                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 10/05/2024</span>
@@ -381,12 +403,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
-                          <AvatarFallback>NTM</AvatarFallback>
+                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Nguyễn Thị M</h3>
-                          <p className="text-sm text-muted-foreground">Kế toán viên</p>
+                          <h3 className="font-medium">Nguyễn Duy Tân</h3>
+                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 06/05/2024</span>
@@ -407,12 +429,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/02.png" alt="Avatar" />
                           <AvatarFallback>LTH</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Lê Thị H</h3>
-                          <p className="text-sm text-muted-foreground">Chuyên viên Marketing</p>
+                          <h3 className="font-medium">Thái Hoài An</h3>
+                          <p className="text-sm text-muted-foreground">lethih@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 09/05/2024</span>
@@ -433,12 +455,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/04.png" alt="Avatar" />
                           <AvatarFallback>PVD</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Phạm Văn D</h3>
-                          <p className="text-sm text-muted-foreground">Kỹ sư phần mềm</p>
+                          <h3 className="font-medium">Lê Vy</h3>
+                          <p className="text-sm text-muted-foreground">phamvand@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 07/05/2024</span>
@@ -459,12 +481,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/placeholder.svg" alt="@user" />
+                          <AvatarImage src="/images/avatars/03.png" alt="Avatar" />
                           <AvatarFallback>TVC</AvatarFallback>
                         </Avatar>
                         <div>
-                          <h3 className="font-medium">Trần Văn C</h3>
-                          <p className="text-sm text-muted-foreground">Nhân viên kinh doanh</p>
+                          <h3 className="font-medium">Hà Quang Đại</h3>
+                          <p className="text-sm text-muted-foreground">tranvanc@example.com</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 08/05/2024</span>

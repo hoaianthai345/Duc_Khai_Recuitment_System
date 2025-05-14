@@ -38,7 +38,7 @@ export default function AboutPage() {
                   Về Công ty Cổ phần Đức Khải
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Xây dựng, phát triển để chia sẻ và gắn bó
+                Công ty Cổ phần Đức Khải (DUC KHAI CORPORATION), thành lập ngày 17/03/2005, là doanh nghiệp uy tín trong lĩnh vực bất động sản tại Việt Nam. Trụ sở chính đặt tại Quận 7, TP. Hồ Chí Minh, dưới sự lãnh đạo của ông Phạm Văn Lai, công ty không ngừng phát triển, khẳng định vị thế trên thị trường.
                 </p>
               </div>
               <div className="mx-auto w-full max-w-[500px] aspect-video overflow-hidden rounded-xl">
@@ -126,19 +126,19 @@ export default function AboutPage() {
                     <h3 className="text-xl font-bold">Tầm nhìn</h3>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Trở thành thương hiệu được xã hội công nhận, là đơn vị tiên phong trong lĩnh vực bất động sản và
-                    phát triển hạ tầng tại Việt Nam, mang lại giá trị bền vững cho khách hàng, đối tác và cộng đồng.
+                  Với tầm nhìn tạo dựng thương hiệu được xã hội công nhận, Đức Khải hoạt động theo sứ mệnh "xây dựng, phát triển để chia sẻ và gắn bó". Công ty đề cao các giá trị cần cù, sáng tạo, đột phá, chuẩn mực, hướng tới sự phát triển bền vững.
+
                   </p>
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <Heart className="h-5 w-5 text-primary" />
-                    <h3 className="text-xl font-bold">Sứ mệnh</h3>
+                    <h3 className="text-xl font-bold">Định hướng tương lai</h3>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    "Xây dựng, phát triển để chia sẻ và gắn bó" - Chúng tôi cam kết xây dựng những công trình chất
-                    lượng, phát triển bền vững, chia sẻ giá trị với cộng đồng và gắn bó lâu dài với khách hàng, đối tác.
+                  Định hướng tương lai, Công ty Cổ phần Đức Khải tiếp tục mở rộng quy mô, nâng cao chất lượng dịch vụ và phát triển các dự án bất động sản mang tính đột phá, khẳng định vị thế trên thị trường.
+
                   </p>
                 </div>
 
@@ -188,9 +188,9 @@ export default function AboutPage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:gap-12">
-              <div className="mx-auto aspect-video overflow-hidden rounded-xl">
+              <div className="mx-auto overflow-hidden rounded-xl">
                 <Image
-                  src=""
+                  src="/images/era-town-night.jpeg"
                   alt="Dự án Era Town của Đức Khải về đêm"
                   width={800}
                   height={500}
