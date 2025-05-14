@@ -30,7 +30,7 @@ export default function JobDescriptionDetailPage({ params }: { params: { id: str
         </div>
 
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold">Chỉnh sửa vị trí tuyển dụng</h1>
+          <h1 className="text-2xl font-bold">Thêm vị trí tuyển dụng</h1>
           <div className="flex items-center gap-2">
             <Button variant="outline" asChild>
               <Link href={`/careers/${params.id === "1" ? "software-engineer" : "job-detail"}`} target="_blank">
