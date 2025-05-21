@@ -284,10 +284,10 @@ export default function EmployeeInterviews() {
                         </div>
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/interviews/1">Chi tiết</Link>
+                            <Link href="/employee/interviews/">Chi tiết</Link>
                           </Button>
                           <Button size="sm" asChild>
-                            <Link href="/employee/interviews/1/evaluation">Đánh giá</Link>
+                            <Link href="/employee/interviews/">Đánh giá</Link>
                           </Button>
                         </div>
                       </div>
@@ -331,10 +331,10 @@ export default function EmployeeInterviews() {
                         </div>
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/interviews/2">Chi tiết</Link>
+                            <Link href="/employee/interviews/">Chi tiết</Link>
                           </Button>
                           <Button size="sm" asChild>
-                            <Link href="/employee/interviews/2/evaluation">Đánh giá</Link>
+                            <Link href="/employee/interviews/">Đánh giá</Link>
                           </Button>
                         </div>
                       </div>
@@ -378,10 +378,10 @@ export default function EmployeeInterviews() {
                         </div>
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/interviews/3">Chi tiết</Link>
+                            <Link href="/employee/interviews/">Chi tiết</Link>
                           </Button>
                           <Button size="sm" asChild>
-                            <Link href="/employee/interviews/3/evaluation">Đánh giá</Link>
+                            <Link href="/employee/interviews/">Đánh giá</Link>
                           </Button>
                         </div>
                       </div>
@@ -419,7 +419,7 @@ export default function EmployeeInterviews() {
                       </div>
                       <div className="flex flex-col items-end gap-2">
                         <Button variant="outline" size="sm" asChild>
-                          <Link href="/employee/interviews/4">Xem kết quả</Link>
+                          <Link href="/employee/interviews/">Xem kết quả</Link>
                         </Button>
                       </div>
                     </div>
@@ -456,7 +456,7 @@ export default function EmployeeInterviews() {
                       </div>
                       <div className="flex flex-col items-end gap-2">
                         <Button variant="outline" size="sm" asChild>
-                          <Link href="/employee/interviews/5">Chi tiết</Link>
+                          <Link href="/employee/interviews/">Chi tiết</Link>
                         </Button>
                       </div>
                     </div>

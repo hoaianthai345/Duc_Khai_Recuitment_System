@@ -24,6 +24,7 @@ import {
   Search,
   Filter,
   ArrowUpDown,
+  UserCog,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -89,7 +90,7 @@ const MOCK_ACCOUNTS: Account[] = [
     id: "3",
     name: "Lê Văn C",
     email: "levanc@example.com",
-    role: "Manager",
+    role: "Employee",
     status: "inactive",
     createdAt: "2024-02-01",
     lastLogin: "2024-03-10",
@@ -177,6 +178,12 @@ export default function EmployeeAccountsPage() {
             </Link>
             <Link href="/employee/criteria" className="text-sm font-medium">
               Quản lý tiêu chí
+            </Link>
+            <Link href="/employee/accounts" className="text-sm font-medium">
+              Quản lý tài khoản
+            </Link>
+            <Link href="/employee/email-templates" className="text-sm font-medium">
+              Email mẫu
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -276,6 +283,13 @@ export default function EmployeeAccountsPage() {
                     >
                       <ClipboardList className="h-4 w-4" />
                       <span>Quản lý tiêu chí</span>
+                    </Link>
+                    <Link
+                      href="/employee/accounts"
+                      className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
+                    >
+                      <UserCog className="h-4 w-4" />
+                      <span>Quản lý tài khoản</span>
                     </Link>
                     <Link
                       href="/employee/email-templates"
@@ -390,9 +404,8 @@ export default function EmployeeAccountsPage() {
                         <TableHead>Tài khoản</TableHead>
                         <TableHead>Email</TableHead>
                         <TableHead>Vai trò</TableHead>
-                        <TableHead>Trạng thái</TableHead>
                         <TableHead>Ngày tạo</TableHead>
-                        <TableHead>Đăng nhập gần nhất</TableHead>
+                        <TableHead>Chỉnh sửa gần nhất</TableHead>
                         <TableHead className="text-right">Thao tác</TableHead>
                       </TableRow>
                     </TableHeader>
@@ -410,11 +423,6 @@ export default function EmployeeAccountsPage() {
                           </TableCell>
                           <TableCell>{account.email}</TableCell>
                           <TableCell>{account.role}</TableCell>
-                          <TableCell>
-                            <Badge variant={account.status === "active" ? "default" : "secondary"}>
-                              {account.status === "active" ? "Đang hoạt động" : "Không hoạt động"}
-                            </Badge>
-                          </TableCell>
                           <TableCell>{new Date(account.createdAt).toLocaleDateString('vi-VN')}</TableCell>
                           <TableCell>{new Date(account.lastLogin).toLocaleDateString('vi-VN')}</TableCell>
                           <TableCell className="text-right">

@@ -155,7 +155,7 @@ export default function JobDetailPage({ params }: { params: { slug: string } }) 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-4">Vị trí tuyển dụng</h2>
+                <h2 className="text-2xl font-bold mb-4">Mô tả công việc</h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{jobData.shortDescription}</p>
                 <ul className="space-y-2">
                   {jobData.description.map((item, index) => (
@@ -188,6 +188,14 @@ export default function JobDetailPage({ params }: { params: { slug: string } }) 
                       <span>{item}</span>
                     </li>
                   ))}
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Loại hình công việc: {jobData.type}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Mức lương: {jobData.salary}</span>
+                  </li>
                 </ul>
               </div>
 
@@ -243,14 +251,6 @@ export default function JobDetailPage({ params }: { params: { slug: string } }) 
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Vị trí</span>
                     <span className="font-medium">{jobData.positions}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Mức lương</span>
-                    <span className="font-medium">{jobData.salary}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Loại hình</span>
-                    <span className="font-medium">{jobData.type}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Địa điểm</span>

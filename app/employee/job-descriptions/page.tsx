@@ -274,7 +274,7 @@ export default function JobDescriptionsPage() {
                             </Link>
                           </Button>
                           <Button variant="outline" size="sm" asChild>
-                            <Link href="/careers/software-engineer" target="_blank">
+                            <Link href="/employee/job-descriptions/1">
                               <Eye className="mr-1 h-3.5 w-3.5" />
                               Xem chi tiết
                             </Link>
@@ -310,17 +310,13 @@ export default function JobDescriptionsPage() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge className="bg-green-500">Đang tuyển</Badge>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/job-descriptions/2">
+                          <Button variant="outline" size="sm">
                               <Edit className="mr-1 h-3.5 w-3.5" />
                               Chỉnh sửa
-                            </Link>
                           </Button>
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/careers/marketing-specialist" target="_blank">
+                          <Button variant="outline" size="sm">
                               <Eye className="mr-1 h-3.5 w-3.5" />
                               Xem chi tiết
-                            </Link>
                           </Button>
                           <Button variant="destructive" size="sm">
                             <Trash2 className="mr-1 h-3.5 w-3.5" />
@@ -353,17 +349,13 @@ export default function JobDescriptionsPage() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge className="bg-green-500">Đang tuyển</Badge>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/job-descriptions/3">
+                          <Button variant="outline" size="sm">
                               <Edit className="mr-1 h-3.5 w-3.5" />
                               Chỉnh sửa
-                            </Link>
                           </Button>
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/careers/sales-executive" target="_blank">
+                          <Button variant="outline" size="sm">
                               <Eye className="mr-1 h-3.5 w-3.5" />
                               Xem chi tiết
-                            </Link>
                           </Button>
                           <Button variant="destructive" size="sm">
                             <Trash2 className="mr-1 h-3.5 w-3.5" />
@@ -395,17 +387,13 @@ export default function JobDescriptionsPage() {
                       <div className="flex flex-col items-end gap-2">
                         <Badge variant="outline">Bản nháp</Badge>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/job-descriptions/4">
+                          <Button variant="outline" size="sm">
                               <Edit className="mr-1 h-3.5 w-3.5" />
                               Chỉnh sửa
-                            </Link>
                           </Button>
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/job-descriptions/4/preview" target="_blank">
+                          <Button variant="outline" size="sm">
                               <Eye className="mr-1 h-3.5 w-3.5" />
                               Xem trước
-                            </Link>
                           </Button>
                           <Button variant="destructive" size="sm">
                             <Trash2 className="mr-1 h-3.5 w-3.5" />
@@ -443,15 +431,13 @@ export default function JobDescriptionsPage() {
                           Đã đóng
                         </Badge>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" asChild>
-                            <Link href="/employee/job-descriptions/5">
+                          <Button variant="outline" size="sm">
                               <Edit className="mr-1 h-3.5 w-3.5" />
                               Chỉnh sửa
-                            </Link>
                           </Button>
                           <Button variant="outline" size="sm">
-                            <ExternalLink className="mr-1 h-3.5 w-3.5" />
-                            Mở lại
+                              <Eye className="mr-1 h-3.5 w-3.5" />
+                              Xem chi tiết
                           </Button>
                           <Button variant="destructive" size="sm">
                             <Trash2 className="mr-1 h-3.5 w-3.5" />

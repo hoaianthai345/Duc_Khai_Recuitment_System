@@ -91,7 +91,7 @@ export default function CandidateInterviewsPage() {
               Hồ sơ cá nhân
             </Link>
             <Link href="/candidate/applications" className="text-sm font-medium">
-              Đơn ứng tuyển
+              Vị trí tuyển dụng
             </Link>
             {/* Highlight this link */}
             <Link href="/candidate/interviews" className="text-sm font-medium text-primary">
@@ -176,7 +176,7 @@ export default function CandidateInterviewsPage() {
                     </Link>
                     <Link href="/candidate/applications" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <FileText className="h-4 w-4" />
-                      <span>Đơn ứng tuyển</span>
+                      <span>Vị trí tuyển dụng</span>
                     </Link>
                     {/* Highlight this link */}
                     <Link href="/candidate/interviews" className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary">

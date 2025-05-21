@@ -37,7 +37,7 @@ export default function CandidateDashboard() {
               Hồ sơ cá nhân
             </Link>
             <Link href="/candidate/applications" className="text-sm font-medium">
-              Đơn ứng tuyển
+              Vị trí tuyển dụng
             </Link>
             <Link href="/candidate/interviews" className="text-sm font-medium">
               Lịch phỏng vấn
@@ -127,7 +127,7 @@ export default function CandidateDashboard() {
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                     >
                       <FileText className="h-4 w-4" />
-                      <span>Đơn ứng tuyển</span>
+                      <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link
                       href="/candidate/interviews"

@@ -64,11 +64,11 @@ export default function EmailTemplatesPage() {
             <Link href="/employee/criteria" className="text-sm font-medium">
               Quản lý tiêu chí
             </Link>
-            <Link href="/employee/email-templates" className="text-sm font-medium text-primary">
-              Email mẫu
-            </Link>
             <Link href="/employee/accounts" className="text-sm font-medium">
               Quản lý tài khoản
+            </Link>
+            <Link href="/employee/email-templates" className="text-sm font-medium text-primary">
+              Email mẫu
             </Link>
             <Link href="/employee/reports" className="text-sm font-medium">
               Báo cáo
@@ -168,13 +168,7 @@ export default function EmailTemplatesPage() {
                       <ClipboardList className="h-4 w-4" />
                       <span>Quản lý tiêu chí</span>
                     </Link>
-                    <Link
-                      href="/employee/email-templates"
-                      className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary"
-                    >
-                      <Mail className="h-4 w-4" />
-                      <span>Email mẫu</span>
-                    </Link>
+
                     <Link
                       href="/employee/accounts"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
@@ -182,6 +176,15 @@ export default function EmailTemplatesPage() {
                       <UserCog className="h-4 w-4" />
                       <span>Quản lý tài khoản</span>
                     </Link>
+
+                    <Link
+                      href="/employee/email-templates"
+                      className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary"
+                    >
+                      <Mail className="h-4 w-4" />
+                      <span>Email mẫu</span>
+                    </Link>
+
                     <Link
                       href="/employee/reports"
                       className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"

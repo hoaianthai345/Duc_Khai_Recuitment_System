@@ -39,7 +39,7 @@ export default function HomePage() {
               Website phục vụ quy trình tuyển dụng cho Công ty Cổ phần Đức Khải.
             </p>
             <p className="mx-auto max-w-[700px] text-sky-200 md:text-lg mt-2 dark:text-sky-300">
-              <p>Môn học: Business Analyst (BA)</p>
+              <p>Môn học: Phân tích nghiệp vụ kinh doanh</p>
               <p>Giải viên hướng dẫn: Phạm Thị Thanh Tâm</p>
             </p>
           </div>
@@ -78,25 +78,91 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {[1, 2, 3, 4, 5].map((member) => (
-                <Card key={member} className="text-center">
-                  <CardHeader>
-                    <Avatar className="mx-auto h-24 w-24 mb-4">
-                      <AvatarImage src={`/images/candidate-avatar.png`} alt={`Thành viên ${member}`} />
-                      <AvatarFallback>AV</AvatarFallback>
-                    </Avatar>
-                    <CardTitle>Tên Sinh Viên {member}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-1">
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Mã số sinh viên: [Nhập MSSV]
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">
-                      Vai trò: [Vai trò trong dự án]
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card className="text-center">
+                <CardHeader>
+                  <Avatar className="mx-auto h-24 w-24 mb-4">
+                    <AvatarImage src={`images/candidate-avatar.png`} alt={`Thành viên 1`} />
+                    <AvatarFallback>AV</AvatarFallback>
+                  </Avatar>
+                  <CardTitle>Nguyễn Duy Tân</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Mã số sinh viên: 31231023384
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    Vai trò: 
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <Avatar className="mx-auto h-24 w-24 mb-4">
+                    <AvatarImage src={`images/avatars/02.png`} alt={`Thành viên 2`} />
+                    <AvatarFallback>AV</AvatarFallback>
+                  </Avatar>
+                  <CardTitle>Thái Hoài An</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Mã số sinh viên: 31231025020
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    Vai trò: [Vai trò trong dự án]
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <Avatar className="mx-auto h-24 w-24 mb-4">
+                    <AvatarImage src={`/images/avatars/03.png`} alt={`Thành viên 3`} />
+                    <AvatarFallback>AV</AvatarFallback>
+                  </Avatar>
+                  <CardTitle>Hà Quang Đại</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Mã số sinh viên: 3123102xxxx
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    Vai trò: [Vai trò trong dự án]
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <Avatar className="mx-auto h-24 w-24 mb-4">
+                    <AvatarImage src={`/images/duongthuy.png`} alt={`Thành viên 4`} />
+                    <AvatarFallback>AV</AvatarFallback>
+                  </Avatar>
+                  <CardTitle>Nguyễn Thị Thùy Dương</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Mã số sinh viên: 3123
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    Vai trò: [Vai trò trong dự án]
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <Avatar className="mx-auto h-24 w-24 mb-4">
+                    <AvatarImage src={`/images/avatars/04.png`} alt={`Thành viên 5`} />
+                    <AvatarFallback>AV</AvatarFallback>
+                  </Avatar>
+                  <CardTitle>Lê Vy</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Mã số sinh viên: 3123102xxxx
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    Vai trò: [Vai trò trong dự án]
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

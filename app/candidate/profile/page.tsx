@@ -94,7 +94,7 @@ export default function CandidateProfilePage() {
               Hồ sơ cá nhân
             </Link>
             <Link href="/candidate/applications" className="text-sm font-medium">
-              Đơn ứng tuyển
+              Vị trí tuyển dụng
             </Link>
             <Link href="/candidate/interviews" className="text-sm font-medium">
               Lịch phỏng vấn
@@ -184,7 +184,7 @@ export default function CandidateProfilePage() {
                     </Link>
                     <Link href="/candidate/applications" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <FileText className="h-4 w-4" />
-                      <span>Đơn ứng tuyển</span>
+                      <span>Vị trí tuyển dụng</span>
                     </Link>
                     <Link href="/candidate/interviews" className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted">
                       <Calendar className="h-4 w-4" />
@@ -237,109 +237,103 @@ export default function CandidateProfilePage() {
               </CardContent>
             </Card>
 
-            {/* Summary Card */}
-             <Card>
-               <CardHeader>
-                 <div className="flex justify-between items-center">
-                   <CardTitle>Giới thiệu bản thân</CardTitle>
-                   <Button variant="outline" size="sm">
-                     <Edit className="mr-1 h-3.5 w-3.5" />
-                     Chỉnh sửa
-                   </Button>
-                 </div>
-               </CardHeader>
-               <CardContent>
-                 <p className="text-sm text-muted-foreground">{candidateData.summary}</p>
-               </CardContent>
-             </Card>
-
-            {/* Skills Card */}
+            {/* CV Details Card */}
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-center">
-                  <CardTitle>Kỹ năng</CardTitle>
-                  <Button variant="outline" size="sm">
-                    <Edit className="mr-1 h-3.5 w-3.5" />
-                    Chỉnh sửa
-                  </Button>
+                  <CardTitle>Chi tiết CV</CardTitle>
+                  {/* Optional: Add a general edit button for the whole CV section */}
+                  {/* <Button variant="outline" size="sm"><Edit className="mr-1 h-3.5 w-3.5" /> Chỉnh sửa CV</Button> */}
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {candidateData.skills.map((skill, index) => (
-                    <Badge key={index} variant="secondary">{skill}</Badge>
-                  ))}
-                  {/* Maybe add a button to add new skills */}
-                  {/* <Button variant="ghost" size="sm"><Plus className="mr-1 h-3.5 w-3.5" /> Thêm kỹ năng</Button> */}
-                </div>
+              <CardContent className="space-y-8"> {/* Increased spacing between sections */}
+                {/* Summary Section */}
+                <section>
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-lg font-semibold">Giới thiệu bản thân</h3>
+                    <Button variant="outline" size="sm">
+                      <Edit className="mr-1 h-3.5 w-3.5" /> Chỉnh sửa
+                    </Button>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{candidateData.summary}</p>
+                </section>
+
+                {/* Skills Section */}
+                <section>
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-lg font-semibold">Kỹ năng</h3>
+                    <Button variant="outline" size="sm">
+                      <Edit className="mr-1 h-3.5 w-3.5" /> Chỉnh sửa
+                    </Button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {candidateData.skills.map((skill, index) => (
+                      <Badge key={index} variant="secondary">{skill}</Badge>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Work Experience Section */}
+                <section>
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-lg font-semibold">Kinh nghiệm làm việc</h3>
+                    <Button variant="outline" size="sm">
+                      <Plus className="mr-1 h-3.5 w-3.5" /> Thêm
+                    </Button>
+                  </div>
+                  <div className="space-y-6">
+                    {candidateData.experience.map((exp) => (
+                      <div key={exp.id} className="border-l-2 border-primary/20 pl-4 pb-4 relative group">
+                        <div className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity space-x-1">
+                          <Button variant="ghost" size="icon" className="h-7 w-7">
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                          <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive hover:text-destructive">
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        <h4 className="text-base font-medium">{exp.position}</h4>
+                        <p className="text-sm font-semibold">{exp.company}</p>
+                        <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
+                        <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                          {exp.description.map((desc, index) => (
+                            <li key={index}>{desc}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Education Section */}
+                <section>
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-lg font-semibold">Học vấn</h3>
+                    <Button variant="outline" size="sm">
+                      <Plus className="mr-1 h-3.5 w-3.5" /> Thêm
+                    </Button>
+                  </div>
+                  <div className="space-y-6">
+                    {candidateData.education.map((edu) => (
+                      <div key={edu.id} className="border-l-2 border-primary/20 pl-4 pb-4 relative group">
+                        <div className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity space-x-1">
+                          <Button variant="ghost" size="icon" className="h-7 w-7">
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                          <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive hover:text-destructive">
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        <h4 className="text-base font-medium">{edu.institution}</h4>
+                        <p className="text-sm font-semibold">{edu.degree}</p>
+                        <p className="text-sm text-muted-foreground mb-2">{edu.duration}</p>
+                        {edu.notes && <p className="text-sm text-muted-foreground">{edu.notes}</p>}
+                      </div>
+                    ))}
+                  </div>
+                </section>
               </CardContent>
             </Card>
-
-            {/* Work Experience Card */}
-            <Card>
-              <CardHeader>
-                <div className="flex justify-between items-center">
-                  <CardTitle>Kinh nghiệm làm việc</CardTitle>
-                  <Button variant="outline" size="sm">
-                    <Plus className="mr-1 h-3.5 w-3.5" />
-                    Thêm
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                {candidateData.experience.map((exp) => (
-                  <div key={exp.id} className="border-l-2 border-primary/20 pl-4 pb-4 relative group">
-                     <div className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity space-x-1">
-                       <Button variant="ghost" size="icon" className="h-7 w-7">
-                         <Edit className="h-4 w-4" />
-                       </Button>
-                        <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive hover:text-destructive">
-                         <Trash2 className="h-4 w-4" />
-                       </Button>
-                     </div>
-                     <h3 className="text-base font-medium">{exp.position}</h3>
-                     <p className="text-sm font-semibold">{exp.company}</p>
-                     <p className="text-sm text-muted-foreground mb-2">{exp.duration}</p>
-                     <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                       {exp.description.map((desc, index) => (
-                         <li key={index}>{desc}</li>
-                       ))}
-                     </ul>
-                   </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Education Card */}
-            <Card>
-               <CardHeader>
-                 <div className="flex justify-between items-center">
-                   <CardTitle>Học vấn</CardTitle>
-                   <Button variant="outline" size="sm">
-                     <Plus className="mr-1 h-3.5 w-3.5" />
-                     Thêm
-                   </Button>
-                 </div>
-               </CardHeader>
-               <CardContent className="space-y-6">
-                 {candidateData.education.map((edu) => (
-                   <div key={edu.id} className="border-l-2 border-primary/20 pl-4 pb-4 relative group">
-                       <div className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity space-x-1">
-                       <Button variant="ghost" size="icon" className="h-7 w-7">
-                         <Edit className="h-4 w-4" />
-                       </Button>
-                        <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive hover:text-destructive">
-                         <Trash2 className="h-4 w-4" />
-                       </Button>
-                     </div>
-                     <h3 className="text-base font-medium">{edu.institution}</h3>
-                     <p className="text-sm font-semibold">{edu.degree}</p>
-                     <p className="text-sm text-muted-foreground mb-2">{edu.duration}</p>
-                     {edu.notes && <p className="text-sm text-muted-foreground">{edu.notes}</p>}
-                   </div>
-                 ))}
-               </CardContent>
-             </Card>
 
               {/* Documents Card */}
              <Card>

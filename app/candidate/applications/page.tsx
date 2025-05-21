@@ -37,7 +37,7 @@ export default function CandidateApplicationsPage() {
               Hồ sơ cá nhân
             </Link>
             <Link href="/candidate/applications" className="text-sm font-medium text-primary font-semibold">
-              Đơn ứng tuyển
+              Vị trí tuyển dụng
             </Link>
             <Link href="/candidate/interviews" className="text-sm font-medium">
               Lịch phỏng vấn
@@ -127,7 +127,7 @@ export default function CandidateApplicationsPage() {
                       className="flex items-center gap-3 rounded-md bg-primary/10 px-3 py-2 text-primary"
                     >
                       <FileText className="h-4 w-4" />
-                      <span>Đơn ứng tuyển</span>
+                      <span>Vị trí tuyển dụng</span>  
                     </Link>
                     <Link
                       href="/candidate/interviews"
@@ -151,7 +151,7 @@ export default function CandidateApplicationsPage() {
           <div className="md:w-3/4">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <h1 className="text-2xl font-bold">Quản lý Đơn ứng tuyển</h1>
+                <h1 className="text-2xl font-bold">Quản lý Hồ sơ ứng tuyển vào vị trí tuyển dụng</h1>
                 <Button asChild>
                   <Link href="/careers">
                     <Briefcase className="mr-2 h-4 w-4" />

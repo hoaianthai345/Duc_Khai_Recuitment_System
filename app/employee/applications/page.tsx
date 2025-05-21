@@ -244,12 +244,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarImage src="/images/candidate-avatar.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Nguyễn Duy Tân</h3>
-                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
+                          <p className="text-sm text-muted-foreground">tannguyen.31231022904@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 10/05/2024</span>
@@ -332,12 +332,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarImage src="/images/candidate-avatar.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Nguyễn Duy Tân</h3>
-                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
+                          <p className="text-sm text-muted-foreground">tannguyen.31231022904@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 06/05/2024</span>
@@ -381,12 +381,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarImage src="/images/candidate-avatar.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Nguyễn Duy Tân</h3>
-                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
+                          <p className="text-sm text-muted-foreground">tannguyen.31231022904@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 10/05/2024</span>
@@ -403,12 +403,12 @@ export default function EmployeeApplications() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-start gap-4">
                         <Avatar>
-                          <AvatarImage src="/images/avatars/01.png" alt="Avatar" />
+                          <AvatarImage src="/images/candidate-avatar.png" alt="Avatar" />
                           <AvatarFallback>NVA</AvatarFallback>
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Nguyễn Duy Tân</h3>
-                          <p className="text-sm text-muted-foreground">nguyenvana@example.com</p>
+                          <p className="text-sm text-muted-foreground">tannguyen.31231022904@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 06/05/2024</span>
@@ -434,7 +434,7 @@ export default function EmployeeApplications() {
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Thái Hoài An</h3>
-                          <p className="text-sm text-muted-foreground">lethih@example.com</p>
+                          <p className="text-sm text-muted-foreground">anthai.31231025020@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 09/05/2024</span>
@@ -460,7 +460,7 @@ export default function EmployeeApplications() {
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Lê Vy</h3>
-                          <p className="text-sm text-muted-foreground">phamvand@example.com</p>
+                          <p className="text-sm text-muted-foreground">vyle.3123102xxxx@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 07/05/2024</span>
@@ -486,7 +486,7 @@ export default function EmployeeApplications() {
                         </Avatar>
                         <div>
                           <h3 className="font-medium">Hà Quang Đại</h3>
-                          <p className="text-sm text-muted-foreground">tranvanc@example.com</p>
+                          <p className="text-sm text-muted-foreground">daiha.3123102xxxx@st.ueh.edu.vn</p>
                           <div className="flex items-center gap-2 mt-1">
                             <Clock className="h-3 w-3 text-muted-foreground" />
                             <span className="text-xs text-muted-foreground">Đã nộp: 08/05/2024</span>
