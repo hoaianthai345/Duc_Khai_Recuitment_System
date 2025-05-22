@@ -91,7 +91,7 @@ export default function HomePage() {
                     Mã số sinh viên: 31231023384
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Vai trò: 
+                    Vai trò: Leader, Phân tích quy trình As Is
                   </p>
                 </CardContent>
               </Card>
@@ -108,7 +108,7 @@ export default function HomePage() {
                     Mã số sinh viên: 31231025020
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Vai trò: [Vai trò trong dự án]
+                    Vai trò: Xây dựng ERD, Class Diagram, Website
                   </p>
                 </CardContent>
               </Card>
@@ -122,10 +122,10 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Mã số sinh viên: 3123102xxxx
+                    Mã số sinh viên: 31231026075
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Vai trò: [Vai trò trong dự án]
+                    Vai trò: Lấy Requirement, xây dựng Use Case
                   </p>
                 </CardContent>
               </Card>
@@ -139,10 +139,10 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Mã số sinh viên: 3123
+                    Mã số sinh viên: 31231022904
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Vai trò: [Vai trò trong dự án]
+                    Vai trò: Phân tích stakeholder.
                   </p>
                 </CardContent>
               </Card>
@@ -156,10 +156,10 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="space-y-1">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Mã số sinh viên: 3123102xxxx
+                    Mã số sinh viên: 31231022128
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Vai trò: [Vai trò trong dự án]
+                    Vai trò: Xây dựng quy trình To Be
                   </p>
                 </CardContent>
               </Card>
